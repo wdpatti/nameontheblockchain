@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBEFY631PC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QBEFY631PC');
-</script>
-    <!--
-        add favicon here:
-        
-        <link rel="shortcut icon" href="static/img/metamasklogo.png"/>
-    -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QBEFY631PC');
+    </script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="static/img/metamasklogo.png"/>
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/main.css"/>
-    <title>Your name in the Blockchain!</title>
+    <title>Your Name in the Blockchain | Eternalize Your Identity</title>
 </head>
 <body>
-<header class="pageheader">
-    <h1 class="ht">Your name in the blockchain!</h1>
-</header>
+    <header class="pageheader">
+        <div class="container">
+            <h1 class="ht">Your Name in the Blockchain</h1>
+            <p>Eternalize your identity on the blockchain forever.</p>
+        </div>
+    </header>
 
-<div class="ebutton">
-    <input type="text" placeholder="Type your name here" id="nameinput" maxlength="127" size="100" class="input">
-    <button type="button" onclick="eternalize();">Eternalize</button>
-</div>
+    <main class="container">
+        <div class="input-container">
+            <input type="text" placeholder="Enter your name to eternalize it" id="nameinput" maxlength="127" class="input">
+            <button type="button" onclick="eternalize();">Eternalize</button>
+        </div>
+        
+        <div class="center">
+            <p>Your name will be permanently stored on the Polygon blockchain.</p>
+            <p>Once written, it can never be removed or altered.</p>
+        </div>
+    </main>
 
-<p style="position: fixed; bottom: 0%; margin-bottom: 0%; padding-bottom: 3px; margin-left: 0%; padding-left: 0px;">v0.2.6</p>
+    <footer>
+        <div class="container">
+            <p>© 2025 Name on the Blockchain</p>
+        </div>
+    </footer>
 
+    <p class="version">v0.3.0</p>
             
-<script src="js/index.js"></script>
-
-
+    <script src="js/index.js"></script>
 </body>
 </html>

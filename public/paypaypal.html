@@ -1,37 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBEFY631PC"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-    
-          gtag('config', 'G-QBEFY631PC');
-        </script>
-    <!--
-        add favicon here:
-        
-        <link rel="shortcut icon" href="static/img/metamasklogo.png"/>
-    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBEFY631PC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QBEFY631PC');
+    </script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="static/img/metamasklogo.png"/>
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/main.css"/>
-    <title>Pay with Paypal</title>
+    <title>Pay with PayPal | Name on the Blockchain</title>
 </head>
 <body>
-    <h1 class="center">Pay with PayPal</h1>
-    <h2 class="center" id="name"></h2>
-    <input type="email" id="email" placeholder="Email" class="center" style="width: 50%; margin: 0 auto; display: block; margin-bottom: 20px;"/>
-    <button onclick="pay();" id="emailbutton" class="center" style="width: 50%; margin: 0 auto; display: block; margin-bottom: 20px;">Pay</button>
-    <p align="center">By entering your email and clicking "Pay" you consent to receiving marketing and/or transactional emails. You may unsubscribe at any time.</p>
-    <img src="static/img/loading-gif.webp" id="loading" width="3.5%" height="auto" style="display: none; margin-left: auto; margin-right: auto;"/>
-    <h2 id="thx" style="display: none; text-align: center;">Thank you for buying a Name in the Blockchain! We will email you your transaction once it is complete. This will take a few minutes.</h2>
-    <div id="paypal-button-container" class="paypal"></div>
-    <!-- Sample PayPal credentials (client-id) are included -->
-    <!-- main: "https://paypal.com/sdk/js?client-id=AeBVN6J1TEFhrD5UTcRktuITa9tQLfPNLGK5VekTGTefBDbVHTtJC2VWHQUVzj6VNfDADk6YYRrU98y0&currency=USD&intent=capture"-->
+    <header class="pageheader">
+        <div class="container">
+            <h1 class="ht">Pay with PayPal</h1>
+            <p>Complete your purchase safely and securely</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <h2 id="name" class="center"></h2>
+            
+            <div class="input-container">
+                <input type="email" id="email" placeholder="Enter your email address" required />
+                <button type="button" id="emailbutton" onclick="pay();">Continue to Payment</button>
+            </div>
+            
+            <p class="center">By entering your email and clicking "Continue to Payment" you consent to receiving transaction emails. You may unsubscribe at any time.</p>
+            
+            <div class="center">
+                <img src="static/img/loading-gif.webp" id="loading" class="hidden" alt="Loading" />
+                <h2 id="thx" class="hidden">Thank you for buying a Name in the Blockchain! We will email your transaction once complete. This may take a few minutes.</h2>
+                <div id="paypal-button-container"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Name on the Blockchain</p>
+        </div>
+    </footer>
+
+    <!-- PayPal SDK -->
     <script src="https://www.paypal.com/sdk/js?client-id=AeBVN6J1TEFhrD5UTcRktuITa9tQLfPNLGK5VekTGTefBDbVHTtJC2VWHQUVzj6VNfDADk6YYRrU98y0&currency=USD&intent=capture"></script>
-
     <script src="js/paypaypal.js"></script>
-
 </body>
 </html>

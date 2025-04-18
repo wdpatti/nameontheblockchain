@@ -1,32 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBEFY631PC"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-    
-          gtag('config', 'G-QBEFY631PC');
-        </script>
-    <!--
-        add favicon here:
-        
-        <link rel="shortcut icon" href="static/img/metamasklogo.png"/>
-    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBEFY631PC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QBEFY631PC');
+    </script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="static/img/metamasklogo.png"/>
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/main.css"/>
-    <title>Pay with MetaMask</title>
+    <title>Pay with MetaMask | Name on the Blockchain</title>
 </head>
 <body>
-    <div class="center">
-        <h1 id="visualname" class="wrap"></h1>
-        <h2 id="visualaddr"></h2>
-        <div class="fullcenter">
-            <button type="button" class="mmbutton" onclick="getAccount();">Connect Wallet</button>
-            <button type="button" class="mmbutton" id="pay" onclick="pay();">Pay</button>
+    <header class="pageheader">
+        <div class="container">
+            <h1 class="ht">MetaMask Payment</h1>
+            <p>Connect your wallet to eternalize your name</p>
         </div>
-    </div>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <h2 id="visualname" class="center"></h2>
+            
+            <div class="center">
+                <p>Your wallet address:</p>
+                <h3 id="visualaddr" class="address-display"></h3>
+                
+                <div class="button-group">
+                    <button type="button" onclick="getAccount();">Connect Wallet</button>
+                    <button type="button" class="hidden" id="pay" onclick="pay();">Complete Payment</button>
+                </div>
+                
+                <p class="note">Please ensure you're connected to the Polygon network</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Name on the Blockchain</p>
+        </div>
+    </footer>
     
     <script src="js/paymetamask.js"></script>
 </body>

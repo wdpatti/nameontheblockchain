@@ -5,6 +5,11 @@ inputVal.addEventListener("keypress", event => {
   if (unallowedChars.includes(event.key)) {
     event.preventDefault();
   }
+  // Check if Enter key is pressed
+  if (event.key === "Enter") {
+    event.preventDefault();
+    eternalize();
+  }
 });
 
 function eternalize() {

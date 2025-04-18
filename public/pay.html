@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBEFY631PC"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-    
-          gtag('config', 'G-QBEFY631PC');
-        </script>
-    <!--
-        add favicon here:
-        
-        <link rel="shortcut icon" href="static/img/metamasklogo.png"/>
-    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBEFY631PC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QBEFY631PC');
+    </script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="static/img/metamasklogo.png"/>
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/main.css"/>
-    <title>Choose payment method</title>
+    <title>Choose Payment Method | Name on the Blockchain</title>
 </head>
 <body>
-    <h1 class="payheader">Choose a payment method</h1>
-    <div class="fullcenter">
-        <button onclick="paypal();" class="choose">
-            <figure>
-                <img src="static/img/paypallogo.png" height ="100" width="100" />
-                <h1>Pay with Paypal</h1>
-                <p>Centralized<br>Does not require crypto knowledge</p>
-            <figure>
-        </button>
-        
-        <button onclick="metamask();" class="choose">
-            <figure>
-                <img src="static/img/metamasklogo.png" height ="100" width="100" />
-                <h1>Pay with MetaMask</h1>
-                <p>Takes 30 seconds<br>Decentralized<br>Requires crypto knowledge</p>
-            </figure>
-        </button>
-    </div>
+    <header class="pageheader">
+        <div class="container">
+            <h1 class="ht">Choose Your Payment Method</h1>
+            <p>Select how you'd like to pay for your name on the blockchain</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="payment-options">
+            <div class="payment-card" onclick="paypal();">
+                <img src="static/img/paypallogo.png" alt="PayPal logo" />
+                <h3>Pay with PayPal</h3>
+                <p>Simple and secure payment</p>
+                <p>No crypto knowledge needed</p>
+                <button type="button">Select PayPal</button>
+            </div>
+            <div class="payment-card" onclick="metamask();">
+                <img src="static/img/metamasklogo.png" alt="MetaMask logo" />
+                <h3>Pay with MetaMask</h3>
+                <p>Direct blockchain transaction</p>
+                <p>For crypto enthusiasts</p>
+                <button type="button">Select MetaMask</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Name on the Blockchain</p>
+        </div>
+    </footer>
+    
     <script src="js/pay.js"></script>
 </body>
 </html>

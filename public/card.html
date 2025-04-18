@@ -1,38 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBEFY631PC"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-    
-          gtag('config', 'G-QBEFY631PC');
-        </script>
-    <!--
-        add favicon here:
-        
-        <link rel="shortcut icon" href="static/img/metamasklogo.png"/>
-    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBEFY631PC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QBEFY631PC');
+    </script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="static/img/metamasklogo.png"/>
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/main.css"/>
-    <title>Custom Card</title>
+    <title>Your Digital Certificate | Name on the Blockchain</title>
 </head>
 <body>
-    <div class="card">
-        <div class="left">
-            <h1>I put my name on the blockchain!</h1>
-            <h3 id="name"></h3>
-            <h4 id="tx"></h4>
-            
+    <header class="pageheader">
+        <div class="container">
+            <h1 class="ht">Your Digital Certificate</h1>
+            <p>A verifiable record of your eternal name</p>
         </div>
-        <div id="qrcode" class="right"></div>
-        <p>Powered by nitbc.com</p>
-        
-    </div>
+    </header>
+
+    <main class="container">
+        <div class="card certificate">
+            <div class="certificate-content">
+                <h2>Certificate of Blockchain Inclusion</h2>
+                <div class="certificate-details">
+                    <div class="certificate-info">
+                        <h3>Congratulations!</h3>
+                        <div class="detail-item">
+                            <p>Name:</p>
+                            <h4 id="name"></h4>
+                        </div>
+                        <div class="detail-item">
+                            <p>Transaction ID:</p>
+                            <p id="tx" class="tx-hash"></p>
+                        </div>
+                        <p class="verification-note">This name has been permanently recorded on the Polygon blockchain.</p>
+                    </div>
+                    <div class="qrcode" id="qrcode"></div>
+                </div>
+            </div>
+            <div class="certificate-footer">
+                <p>Scan the QR code to verify this record on the blockchain</p>
+                <p class="powered-by">Powered by nameontheblockchain.com</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Name on the Blockchain</p>
+        </div>
+    </footer>
     
     <script src="js/qrcode.js"></script>
     <script src="js/card.js"></script>  
-
 </body>
 </html>
