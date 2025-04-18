@@ -49,7 +49,7 @@ function pay() {
                         },
                         "items": [
                         {
-                            "name": window.name, /* Shows within upper-right dropdown during payment approval */
+                            "name": "Name in the Blockchain", /* Shows within upper-right dropdown during payment approval */
                             "description": "Name in the Blockchain", /* Item details will also be in the completed paypal.com transaction view */
                             "unit_amount": {
                             "currency_code": "USD",
